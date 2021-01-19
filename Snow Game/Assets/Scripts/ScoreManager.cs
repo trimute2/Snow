@@ -23,6 +23,14 @@ public class ScoreManager : MonoBehaviour
 			return _instance;
 		}
 	}
+
+	public static bool InstanceExists
+	{
+		get
+		{
+			return (_instance != null);
+		}
+	}
 	private static ScoreManager _instance;
 
     // Start is called before the first frame update

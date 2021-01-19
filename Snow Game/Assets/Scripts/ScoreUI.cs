@@ -27,6 +27,9 @@ public class ScoreUI : MonoBehaviour
 
 	public void OnDestroy()
 	{
-		ScoreManager.Instance.OnUpdateScore -= SetScoreUI;
+		if (ScoreManager.InstanceExists)
+		{
+			ScoreManager.Instance.OnUpdateScore -= SetScoreUI;
+		}
 	}
 }
