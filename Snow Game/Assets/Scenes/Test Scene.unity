@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 946395960}
   - component: {fileID: 946395959}
   - component: {fileID: 946395963}
+  - component: {fileID: 946395965}
   - component: {fileID: 946395964}
   m_Layer: 0
   m_Name: Sphere
@@ -354,6 +355,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   MovePosition: {fileID: 0}
+--- !u!114 &946395965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946395958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e966e2b6deeb71e439f77814a4b9f567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartSize: 10
+  MinimumSize: 2
+  MaximumSize: 30
+  SizeGrowIncrement: -1
+  SizeScaleIncrement: 0.05
+  GrowTime: 1.5
 --- !u!1 &1092827245
 GameObject:
   m_ObjectHideFlags: 0
