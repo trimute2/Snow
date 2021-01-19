@@ -17,31 +17,40 @@ public class SnowBallScript : MonoBehaviour
 
 	private float InitialScale;
 
-	private int CurrentSize;
+	public int CurrentSize
+	{
+		get
+		{
+			return _currentSize;
+		}
+	}
+
+	private int _currentSize;
 	private float GrowClock;
 
     // Start is called before the first frame update
     void Start()
     {
 		InitialScale = transform.localScale.x;
-		CurrentSize = StartSize;
+		_currentSize = StartSize;
 		GrowClock = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-		if(CurrentSize < MaximumSize)
+		if(_currentSize < MaximumSize)
 		{
 			GrowClock += Time.deltaTime;
 			if(GrowClock >= GrowTime)
 			{
-				SetSize((int)Mathf.Min(CurrentSize + SizeGrowIncrement, MaximumSize));
+				//SetSize((int)Mathf.Min(_currentSize + SizeGrowIncrement, MaximumSize));
+				IncreaseSize(SizeGrowIncrement);
 			}
 		}
     }
 
-	public void SetSize(int newSize)
+	private void SetSize(int newSize)
 	{
 		if(newSize < MinimumSize)
 		{
@@ -49,7 +58,7 @@ public class SnowBallScript : MonoBehaviour
 			return;
 		}
 		GrowClock = 0;
-		CurrentSize = newSize;
+		_currentSize = newSize;
 		float calcSize = newSize - StartSize;
 		if(calcSize > 0)
 		{
@@ -61,5 +70,16 @@ public class SnowBallScript : MonoBehaviour
 		}
 		float newScale = calcSize * InitialScale;
 		transform.localScale = Vector3.one * newScale;
+	}
+
+	public void IncreaseSize(int ChangeInSize, bool IgnoreMax = false)
+	{
+		int newSize = _currentSize + ChangeInSize;
+		if (!IgnoreMax)
+		{
+			newSize = Mathf.Min(newSize, MaximumSize);
+		}
+
+		SetSize(newSize);
 	}
 }
