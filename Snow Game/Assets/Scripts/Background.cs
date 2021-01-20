@@ -6,19 +6,15 @@ public class Background : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 5f;
-    private Vector2 offset;
-    float nowpos;
+    public GameObject obstacles;
     void Start()
     {
-        offset = new Vector2(0, 0);
-        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", offset);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        nowpos += speed * Time.deltaTime;
-        offset = new Vector2(0f, nowpos);
-        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", offset);
+        obstacles.transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
     }
 }

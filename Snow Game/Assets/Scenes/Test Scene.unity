@@ -998,7 +998,6 @@ GameObject:
   - component: {fileID: 1568025782}
   - component: {fileID: 1568025781}
   - component: {fileID: 1568025780}
-  - component: {fileID: 1568025779}
   - component: {fileID: 1568025778}
   m_Layer: 0
   m_Name: Goal
@@ -1033,21 +1032,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.0000005, y: 4}
   m_EdgeRadius: 0
---- !u!114 &1568025779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568025777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96357bc62193ad14597abb107f608109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  obstacles: {fileID: 1568025777}
-  SnowDamage: -1
 --- !u!114 &1568025780
 MonoBehaviour:
   m_ObjectHideFlags: 0
