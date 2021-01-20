@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 5974b5c20e14afa4c858b6b1bab565b0
+guid: 250beb87977649946ba3497bf1157182
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4520326530238388498
-    second: snowball_spritesheet_0
+      213: -4894903230792182011
+    second: spritesheet (2) 1_0
   - first:
-      213: -7305511366570298388
-    second: snowball_spritesheet_1
+      213: -8056920596829309238
+    second: spritesheet (2) 1_1
   - first:
-      213: 6142779033839500413
-    second: snowball_spritesheet_2
+      213: -2643069609298338988
+    second: spritesheet (2) 1_2
   - first:
-      213: -4457737417671118126
-    second: snowball_spritesheet_3
+      213: 3964638535244178260
+    second: spritesheet (2) 1_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: snowball_spritesheet_0
+      name: spritesheet (2) 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21912af870d6bbe30800000000000000
-      internalID: 4520326530238388498
+      spriteID: 50758b6227fc11cb0800000000000000
+      internalID: -4894903230792182011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snowball_spritesheet_1
+      name: spritesheet (2) 1_1
       rect:
         serializedVersion: 2
         x: 226
@@ -146,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce3bffc4e1c9d9a90800000000000000
-      internalID: -7305511366570298388
+      spriteID: ac6f5729761103090800000000000000
+      internalID: -8056920596829309238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snowball_spritesheet_2
+      name: spritesheet (2) 1_2
       rect:
         serializedVersion: 2
         x: 450
@@ -167,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7c78b54cf88f3550800000000000000
-      internalID: 6142779033839500413
+      spriteID: 45b5425a13ee15bd0800000000000000
+      internalID: -2643069609298338988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snowball_spritesheet_3
+      name: spritesheet (2) 1_3
       rect:
         serializedVersion: 2
         x: 675
@@ -188,8 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d2febdcf6fe222c0800000000000000
-      internalID: -4457737417671118126
+      spriteID: 453ed040eb9350730800000000000000
+      internalID: 3964638535244178260
       vertices: []
       indices: 
       edges: []
