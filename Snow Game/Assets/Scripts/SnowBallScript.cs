@@ -34,6 +34,9 @@ public class SnowBallScript : MonoBehaviour
 	private float CurrentScoreVal;
 	private float ScoreHandle;
 
+	private SpriteRenderer spriteRenderer;
+	private float redTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +45,8 @@ public class SnowBallScript : MonoBehaviour
 		GrowClock = 0;
 		CurrentScoreVal = StartScoreVal;
 		ScoreHandle = 0;
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		redTime = 0;
     }
 
     // Update is called once per frame
@@ -61,6 +66,16 @@ public class SnowBallScript : MonoBehaviour
 		{
 			ScoreManager.Instance.IncrementScore(Mathf.FloorToInt(ScoreHandle));
 			ScoreHandle -= Mathf.FloorToInt(ScoreHandle);
+		}
+
+		if(redTime > 0)
+		{
+			redTime -= Time.deltaTime;
+			if(redTime <= 0)
+			{
+				spriteRenderer.color = Color.white;
+				redTime = 0;
+			}
 		}
     }
 
@@ -92,6 +107,13 @@ public class SnowBallScript : MonoBehaviour
 
 	public void IncreaseSize(int ChangeInSize, bool IgnoreMax = false)
 	{
+
+		if(ChangeInSize < 0 && spriteRenderer != null)
+		{
+			spriteRenderer.color = Color.red;
+			redTime = 0.5f;
+		}
+
 		int newSize = _currentSize + ChangeInSize;
 		if (!IgnoreMax)
 		{
