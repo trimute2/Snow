@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     //Main Menu
 
-    const int numOfLevels = 2;
+    const int numOfLevels = 5;
     public void PlayGame()
     {
         if (SceneManager.GetActiveScene().buildIndex <= (numOfLevels-1))
